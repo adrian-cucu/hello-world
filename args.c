@@ -10,21 +10,13 @@
  *
  * */
 
-int main (int argc, char **argv)
-{
+int 
+main (int argc, char **argv){
 	int ac = argc;
 	char ** av = argv;
 
-	-- ac;
-	++ av;
+	while (--ac && av++) 
+		puts (*av);		
 
-	while (ac && av) {
-
-		puts (*av);
-
-		--ac;
-		++av;
-	}
-		
 	return 0;
 }
