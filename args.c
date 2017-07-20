@@ -12,10 +12,19 @@
 
 int main (int argc, char **argv)
 {
-	int i;
-	for (i = 1; i < argc; ++ i)
-	{
-		printf ("%s ", argv [i]);
-	}			
+	int ac = argc;
+	char ** av = argv;
+
+	-- ac;
+	++ av;
+
+	while (ac && av) {
+
+		puts (*av);
+
+		--ac;
+		++av;
+	}
+		
 	return 0;
 }
